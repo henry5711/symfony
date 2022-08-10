@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Categortias{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <h1>Editar categoria</h1>
+
+        {{ include('category/formCategory.html.twig', {'button_label': 'Editar'}) }}
+    
+        <a href="{{ path('app_category_index') }}">Regresar al index</a>
+    
+    </body>
+</html>

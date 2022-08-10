@@ -1,0 +1,9 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+category:
+    path: /category/post
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\CategoryController::post
